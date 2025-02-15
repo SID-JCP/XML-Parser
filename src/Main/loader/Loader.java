@@ -49,7 +49,9 @@ public class Loader {
 //		System.out.println(doc.getRootNode().attributes.get(1).getKey() + " " + doc.getRootNode().attributes.get(1).getValue());
 		
 		System.out.println(doc.getRootNode().getTag());
-		System.out.println(doc.getRootNode().getText());
+		
+		System.out.println(doc.getRootNode().children.get(3).children.get(0).getTag());
+		
 		
 		
 		

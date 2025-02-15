@@ -52,6 +52,7 @@ public class Parser {
 					}else {
 						
 						cursor.setText(accum.toString());
+						accum.setLength(0);
 					}
 					
 				}
@@ -74,8 +75,23 @@ public class Parser {
 					
 					if(!cursor.getTag().equals(accum.toString())) 
 					{
-						return;
+						if(cursor.parent != null) 
+						{
+							if(!cursor.parent.getTag().equals(accum.toString()))
+							{
+								return;
+							}
+						}
+						
+						
 					}
+					
+					
+					if(cursor.parent != null) cursor = cursor.parent;
+					
+//					System.out.println(accum.toString());
+//					
+					accum.setLength(0);
 					
 					continue;
 				}
@@ -87,6 +103,9 @@ public class Parser {
 					
 				}else {				
 					cursor = new Node(cursor);
+					
+					//adding the child to the child array of parent
+					cursor.parent.children.add(cursor);
 				}
 				
 				
@@ -146,7 +165,9 @@ public class Parser {
 				continue;
 				
 			}else {
-								
+				
+				
+				
 				accum.append(contents[i]);
 				
 				

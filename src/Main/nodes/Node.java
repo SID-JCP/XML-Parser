@@ -6,7 +6,7 @@ import java.util.List;
 public class Node
 {
 
-	Node parent;
+	public Node parent;
 	
 	// <tag>
 	String tag;
@@ -19,10 +19,14 @@ public class Node
 	//<tag key = "value" key2 = "value2">
 	public List<NodeAttribute> attributes = new ArrayList();
 	
+	//<A> <B></B> </A>
+	public List<Node> children = new ArrayList();
+	
 	
 	public Node(Node parent) 
 	{
 		this.parent = parent;
+		
 	}
 	
 	public String getTag() {
