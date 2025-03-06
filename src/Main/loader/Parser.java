@@ -166,7 +166,10 @@ public class Parser {
 				
 			}else {
 				
-				
+				if(contents[i] == ' ' && accum.isEmpty()) 
+				{
+					continue;
+				}
 				
 				accum.append(contents[i]);
 				

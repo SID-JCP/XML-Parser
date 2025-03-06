@@ -1,25 +1,13 @@
-<body     color="green">
-	
-	Sup
-	
-	<child1>
-		yo
-	</child1>
-	
-	<child2>
-		oni
-	</child2>
-	
-	<child3>
-		oni
-	</child3>
-	
-	<child4>
-	
-		<sibling>
-			Deeper
-		</sibling>
-		
-	</child4>
-	
-</body>
+<html>
+	<head>
+		<p font = "calibri" size = "10">
+			Hi this is an xmlparser but HTML which is also an xml format , works
+		</p>
+	</head>
+	<body>
+		<button>
+			click me
+		</button>
+	</body>
+</html>
+

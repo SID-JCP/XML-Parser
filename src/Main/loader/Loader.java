@@ -30,9 +30,8 @@ public class Loader {
 			}
 			
 			
-			
-			
-			doc.setContents(string.toString().toCharArray());
+
+			doc.setContents(string.toString().replaceAll("\\t","").toCharArray());
 			
 			
 		} catch (IOException e) {
@@ -44,17 +43,7 @@ public class Loader {
 		Parser parser = new Parser(doc);
 		
 		parser.parse();
-		
-//		System.out.println(doc.getRootNode().attributes.get(0).getKey() + " " + doc.getRootNode().attributes.get(0).getValue());
-//		System.out.println(doc.getRootNode().attributes.get(1).getKey() + " " + doc.getRootNode().attributes.get(1).getValue());
-		
-		System.out.println(doc.getRootNode().getTag());
-		
-		System.out.println(doc.getRootNode().children.get(3).children.get(0).getTag());
-		
-		
-		
-		
+
 		
 	}
 	

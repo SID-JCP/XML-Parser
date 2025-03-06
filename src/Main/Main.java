@@ -12,6 +12,8 @@ public class Main {
 		Loader.load(doc , args[0]);
 		
 		
+		Viewer.displayAsList(doc);
+		
 		
 
 	}
